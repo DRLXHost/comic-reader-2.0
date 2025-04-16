@@ -195,6 +195,36 @@
 
       .swipe-indicator.active {
         opacity: 1;
+        /* Hide navigation buttons on phones */
+@media (max-width: 768px) {
+  .nav-button {
+    display: none;
+  }
+}
+
+.nav-button.visible {
+  opacity: 0.8;
+}
+
+.nav-button:hover {
+  opacity: 1;
+  transform: translateY(-50%) scale(1.1);
+  background-color: #ffee58;
+}
+
+.nav-button:disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
+  transform: translateY(-50%);
+}
+
+#prevBtn {
+  left: 20px;
+}
+
+#nextBtn {
+  right: 20px;
+}
       }
     </style>
   </head>
